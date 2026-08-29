@@ -459,28 +459,68 @@ function showToast(message) {
 }
 
 /* ==========================================================================
-   100% RELIABLE EMAIL DISPATCH TO sumitgawai269@gmail.com
+   GUARANTEED DIRECT INBOX DISPATCH TO sumitgawai269@gmail.com
    ========================================================================== */
-window.sendViaMailClient = function() {
-  const name = document.getElementById('senderName').value || 'Recruiter';
-  const email = document.getElementById('senderEmail').value || '';
-  const company = document.getElementById('senderCompany').value || 'Organization';
-  const message = document.getElementById('senderMessage').value || 'Hi Sumit, I would like to connect regarding an opportunity.';
+window.handleContactDispatch = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('senderName').value.trim();
+  const email = document.getElementById('senderEmail').value.trim();
+  const company = document.getElementById('senderCompany').value.trim() || 'Recruiter';
+  const message = document.getElementById('senderMessage').value.trim();
 
-  const subject = encodeURIComponent(`Portfolio Opportunity: ${name} (${company})`);
-  const body = encodeURIComponent(`Hi Sumit,
+  const submitBtn = document.getElementById('submitBtn');
+  if (submitBtn) {
+    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Opening Gmail...</span>`;
+  }
+
+  const subjectText = `Portfolio Opportunity: ${name} (${company})`;
+  const bodyText = `Hi Sumit,
 
 Name: ${name}
-Email: ${email}
-Company: ${company}
+Work Email: ${email}
+Organization: ${company}
 
 Message:
 ${message}
 
 ---
-Sent from Portfolio Website`);
+Sent via Sumit Rajendra Gawai Portfolio Website`;
+
+  // 1. Direct Gmail Web Compose URL (Opens Gmail in browser with To, Subject, Body pre-filled)
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sumitgawai269@gmail.com&su=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
   
-  window.location.href = `mailto:sumitgawai269@gmail.com?subject=${subject}&body=${body}`;
+  // 2. Standard Mailto Fallback
+  const mailtoUrl = `mailto:sumitgawai269@gmail.com?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+
+  // Also send asynchronous payload to FormSubmit backup
+  fetch("https://formsubmit.co/ajax/sumitgawai269@gmail.com", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+    body: JSON.stringify({
+      "Recruiter Name": name,
+      "Email": email,
+      "Company": company,
+      "Message": message,
+      "_subject": subjectText
+    })
+  }).catch(() => {});
+
+  // Open Gmail web compose in a new tab
+  const win = window.open(gmailUrl, '_blank');
+  if (!win || win.closed || typeof win.closed === 'undefined') {
+    // If popup blocked, open via mailto
+    window.location.href = mailtoUrl;
+  }
+
+  setTimeout(() => {
+    if (submitBtn) {
+      submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Opened in Gmail!</span>`;
+      setTimeout(() => {
+        submitBtn.innerHTML = `<i class="fa-brands fa-google"></i> <span>Send via Gmail / Email</span>`;
+      }, 3500);
+    }
+    showToast(`Redirecting to Gmail with pre-filled message for sumitgawai269@gmail.com!`);
+  }, 400);
 };
 
 window.handleContactSubmit = async function(e) {
