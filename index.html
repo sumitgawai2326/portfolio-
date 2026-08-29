@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumit Rajendra Gawai | AI & Data Science | Portfolio & Placement Profile</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Sumit Rajendra Gawai | B.Tech AI & Data Science Portfolio (Class of 2029)">
+  <meta name="description" content="Portfolio of Sumit Rajendra Gawai - B.Tech AI & Data Science student at VPKBIET Baramati (Graduating 2029 | Current CGPA: 8.60). Specialized in Python, Computer Vision (OpenCV/SFace), Machine Learning, and Full-Stack Development.">
+  <meta name="keywords" content="Sumit Gawai, Sumit Rajendra Gawai, AI Data Science, Computer Vision, OpenCV, FastAPI, React, Portfolio, Placements, VPKBIET, CGPA 8.6, Class of 2029">
+  <meta name="author" content="Sumit Rajendra Gawai">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sumit Rajendra Gawai | AI & Data Science Portfolio (Class of 2029)">
+  <meta property="og:description" content="B.Tech AI & DS student at VPKBIET Baramati (CGPA: 8.60 • Graduating 2029) with strong foundations in Python, Computer Vision, Machine Learning, and Full-Stack Engineering.">
+  <meta property="og:image" content="assets/profile.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Background Canvas Animation -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Sumit<span class="highlight">.Gawai</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button id="resumeModalBtn" class="btn btn-outline btn-sm">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobileMenuBtn" class="mobile-toggle-btn" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span>Class of 2029 • Open to AI/ML & SDE Placement / Internship Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Sumit Rajendra Gawai</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I am a </span>
+            <span id="typewriterText" class="typewriter-text"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            First-year <strong>B.Tech in Artificial Intelligence & Data Science</strong> student at <strong>VPKBIET, Baramati (Graduating June 2029)</strong> with a <strong>Current CGPA of 8.60</strong> and a solid foundation in Python, Machine Learning, Computer Vision pipelines (OpenCV, SFace), and Full-Stack development.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>Explore Projects</span>
+            </a>
+            <button class="btn btn-secondary open-resume-trigger">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>View / Download Resume</span>
+            </button>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Contact Direct</span>
+            </a>
+          </div>
+
+          <!-- Quick Connect Pills -->
+          <div class="quick-connect-bar">
+            <span class="connect-label">Quick Connect:</span>
+            <a href="https://linkedin.com/in/sumit-gawai-867837373" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/sumitgawai2326" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:sumitgawai269@gmail.com" class="social-pill" title="Send Email">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+            <a href="tel:+918999253421" class="social-pill" title="Call Direct">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 8999253421</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual with Photo (Cleaned - Floating badges removed) -->
+        <div class="hero-visual">
+          <div class="photo-glow-wrapper">
+            <div class="ambient-glow-circle"></div>
+            <div class="photo-card">
+              <img src="assets/profile.jpg" alt="Sumit Rajendra Gawai" class="profile-img" loading="eager" fetchpriority="high">
+              <div class="photo-overlay-card">
+                <div class="verified-icon"><i class="fa-solid fa-certificate"></i></div>
+                <div class="overlay-text">
+                  <strong>Sumit R. Gawai</strong>
+                  <span>B.Tech AI & DS • Graduating 2029 (CGPA 8.60)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="container">
+        <div class="metrics-strip">
+          <div class="metric-item">
+            <div class="metric-number">2029</div>
+            <div class="metric-label">Graduation Year (Batch 25-29)</div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-number">8.60</div>
+            <div class="metric-label">Current B.Tech CGPA</div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-number">2+</div>
+            <div class="metric-label">Full-Stack & AI Systems</div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-number">83.5%</div>
+            <div class="metric-label">HSC Science Distinction</div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-number">3+</div>
+            <div class="metric-label">Industry Certifications</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & PLACEMENT VALUE PROPOSITION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Overview</span>
+          <h2 class="section-title">About Me & Recruiter Value</h2>
+          <p class="section-subtitle">A quick snapshot of my academic journey, core strengths, and what I bring to engineering teams.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Card -->
+          <div class="card bio-card">
+            <h3 class="card-title">
+              <i class="fa-solid fa-user-astronaut card-icon"></i>
+              Engineering Profile
+            </h3>
+            <p class="bio-paragraph">
+              I am a first-year <strong>B.Tech student in Artificial Intelligence and Data Science</strong> at <strong>Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering & Technology (VPKBIET), Baramati</strong> (Graduation Year: <strong>2029</strong>) maintaining a <strong>Current CGPA of 8.60 / 10.0</strong>.
+            </p>
+            <p class="bio-paragraph">
+              My engineering philosophy revolves around <em>practical implementation</em>. Rather than just learning syntax or isolated algorithms, I build complete end-to-end solutions—from training and tuning computer vision models (OpenCV, SFace) for multi-face recognition, to architecting secure FastAPI backends and installable React PWAs deployed on cloud platforms (Render & Firebase).
+            </p>
+            <p class="bio-paragraph">
+              I am actively seeking <strong>technical internships and placement opportunities</strong> where I can contribute to AI/ML pipelines, backend architectures, and production software while continuously leveling up under experienced engineering mentors.
+            </p>
+
+            <div class="quick-facts-grid">
+              <div class="fact-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <div>
+                  <span class="fact-label">Graduation Year</span>
+                  <span class="fact-value"><strong>2029</strong> (Batch 2025–2029)</span>
+                </div>
+              </div>
+              <div class="fact-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <span class="fact-label">Current Academic Standing</span>
+                  <span class="fact-value">B.Tech AI & DS • <strong>8.60 CGPA</strong></span>
+                </div>
+              </div>
+              <div class="fact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="fact-label">Location</span>
+                  <span class="fact-value">Baramati, Maharashtra, India</span>
+                </div>
+              </div>
+              <div class="fact-item">
+                <i class="fa-solid fa-language"></i>
+                <div>
+                  <span class="fact-label">Languages</span>
+                  <span class="fact-value">English, Marathi, Hindi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Pillars for Recruiters -->
+          <div class="value-props-container">
+            <div class="pillar-card">
+              <div class="pillar-icon bg-blue">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Computer Vision & AI/ML</h4>
+                <p>Experience building real-time face detection, confidence threshold tuning, multi-face tracking, and unknown-person rejection using OpenCV & SFace.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-emerald">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>OOP & Clean Code Structure</h4>
+                <p>Disciplined object-oriented programming in Python & C/Java, structured exception handling, modularity, and persistent file-based audit logging.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-purple">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Full-Stack & Cloud Deployment</h4>
+                <p>Capable of integrating React.js frontends with FastAPI backends, building Progressive Web Apps (PWA), and deploying to Firebase Hosting & Render.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-amber">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Agile Learner & Class of 2029</h4>
+                <p>Strong 8.60 CGPA coupled with Gen AI certification and hands-on full-stack development. Quick to adapt to new toolchains and production workflows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Categorized breakdown of programming languages, frameworks, developer tools, and core computer science fundamentals.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-tabs">
+          <button class="skill-tab active" data-category="all">All Skills</button>
+          <button class="skill-tab" data-category="languages">Languages</button>
+          <button class="skill-tab" data-category="aiml">AI / ML & Vision</button>
+          <button class="skill-tab" data-category="web">Web & Backend</button>
+          <button class="skill-tab" data-category="tools">Tools & DevOps</button>
+          <button class="skill-tab" data-category="concepts">Core Concepts</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Python -->
+          <div class="skill-card" data-cat="languages">
+            <div class="skill-header">
+              <i class="fa-brands fa-python skill-logo" style="color: #38bdf8;"></i>
+              <div>
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-badge primary">Primary Language</span>
+              </div>
+            </div>
+            <p class="skill-desc">Core language for AI/ML pipelines, OpenCV vision processing, FastAPI backend services, OOP, and data scripting.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- C Programming -->
+          <div class="skill-card" data-cat="languages">
+            <div class="skill-header">
+              <i class="fa-solid fa-c skill-logo" style="color: #818cf8;"></i>
+              <div>
+                <h4 class="skill-name">C (Basic)</h4>
+                <span class="skill-badge">Certified</span>
+              </div>
+            </div>
+            <p class="skill-desc">Memory layout understanding, pointers, structural programming, and foundational algorithmic thinking.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card" data-cat="languages">
+            <div class="skill-header">
+              <i class="fa-brands fa-java skill-logo" style="color: #f97316;"></i>
+              <div>
+                <h4 class="skill-name">Java (Basic)</h4>
+                <span class="skill-badge">Core OOP</span>
+              </div>
+            </div>
+            <p class="skill-desc">Object-oriented paradigms, classes, inheritance, polymorphism, and Java application fundamentals.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 70%;"></div>
+            </div>
+          </div>
+
+          <!-- OpenCV & SFace -->
+          <div class="skill-card" data-cat="aiml">
+            <div class="skill-header">
+              <i class="fa-solid fa-camera-retro skill-logo" style="color: #10b981;"></i>
+              <div>
+                <h4 class="skill-name">OpenCV & SFace</h4>
+                <span class="skill-badge emerald">Computer Vision</span>
+              </div>
+            </div>
+            <p class="skill-desc">Real-time video frame processing, face feature vector extraction, confidence scoring, and anti-misassignment checks.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="skill-card" data-cat="aiml">
+            <div class="skill-header">
+              <i class="fa-solid fa-network-wired skill-logo" style="color: #a855f7;"></i>
+              <div>
+                <h4 class="skill-name">AI & Machine Learning</h4>
+                <span class="skill-badge purple">Core Discipline</span>
+              </div>
+            </div>
+            <p class="skill-desc">Data preprocessing, model inference pipelines, threshold calibration, and generative AI workflow integration.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- React.js -->
+          <div class="skill-card" data-cat="web">
+            <div class="skill-header">
+              <i class="fa-brands fa-react skill-logo" style="color: #06b6d4;"></i>
+              <div>
+                <h4 class="skill-name">React.js</h4>
+                <span class="skill-badge cyan">Frontend</span>
+              </div>
+            </div>
+            <p class="skill-desc">Component-driven UI, state management, webcam integration, dynamic dashboards, and responsive layout styling.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <!-- FastAPI -->
+          <div class="skill-card" data-cat="web">
+            <div class="skill-header">
+              <i class="fa-solid fa-bolt skill-logo" style="color: #059669;"></i>
+              <div>
+                <h4 class="skill-name">FastAPI</h4>
+                <span class="skill-badge emerald">REST Backend</span>
+              </div>
+            </div>
+            <p class="skill-desc">High-performance asynchronous Python REST APIs, endpoint validation, CORS management, and model serving.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Firebase & Render -->
+          <div class="skill-card" data-cat="tools">
+            <div class="skill-header">
+              <i class="fa-solid fa-server skill-logo" style="color: #eab308;"></i>
+              <div>
+                <h4 class="skill-name">Firebase & Render</h4>
+                <span class="skill-badge yellow">Cloud & Hosting</span>
+              </div>
+            </div>
+            <p class="skill-desc">Production hosting for client-side PWAs on Firebase Hosting, combined with containerized backend services on Render.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card" data-cat="tools">
+            <div class="skill-header">
+              <i class="fa-brands fa-github skill-logo" style="color: #f3f4f6;"></i>
+              <div>
+                <h4 class="skill-name">Git & GitHub</h4>
+                <span class="skill-badge">Version Control</span>
+              </div>
+            </div>
+            <p class="skill-desc">Version control, branch management, collaborative code review workflows, and GitHub repository maintenance.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Object-Oriented Programming -->
+          <div class="skill-card" data-cat="concepts">
+            <div class="skill-header">
+              <i class="fa-solid fa-cubes-stacked skill-logo" style="color: #6366f1;"></i>
+              <div>
+                <h4 class="skill-name">OOP & Architecture</h4>
+                <span class="skill-badge purple">Core CS</span>
+              </div>
+            </div>
+            <p class="skill-desc">Encapsulation, abstraction, inheritance, polymorphism, separation of concerns, and clean interface design.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- File & Error Handling -->
+          <div class="skill-card" data-cat="concepts">
+            <div class="skill-header">
+              <i class="fa-solid fa-file-shield skill-logo" style="color: #3b82f6;"></i>
+              <div>
+                <h4 class="skill-name">File & Error Handling</h4>
+                <span class="skill-badge blue">Reliability</span>
+              </div>
+            </div>
+            <p class="skill-desc">Atomic file writes, JSON/CSV state persistence, exception try/catch pipelines, and comprehensive audit logs.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-card" data-cat="concepts">
+            <div class="skill-header">
+              <i class="fa-solid fa-people-group skill-logo" style="color: #ec4899;"></i>
+              <div>
+                <h4 class="skill-name">Communication & Strategy</h4>
+                <span class="skill-badge pink">Professional</span>
+              </div>
+            </div>
+            <p class="skill-desc">Technical presentation, clear documentation, strategic problem decomposition, and teamwork aptitude.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hands-on Engineering</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications demonstrating computer vision pipelines, full-stack architecture, and robust object-oriented software engineering.</p>
+        </div>
+
+        <div class="projects-list">
+          
+          <!-- PROJECT 1: AI-BASED SMART ATTENDANCE SYSTEM (With direct GitHub Repo Link) -->
+          <div class="project-card feature-project">
+            <div class="project-banner">
+              <div class="project-badge-pill">
+                <i class="fa-solid fa-star"></i> Featured Full-Stack AI Project
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sumitgawai2326/ai-smart-attendance-system" target="_blank" rel="noopener noreferrer" class="icon-link" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <button class="icon-link open-arch-modal" data-project="attendance" title="View System Architecture">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-info">
+                <div class="project-subtitle">Personal Project • Computer Vision & Full-Stack</div>
+                <h3 class="project-heading">AI-Based Smart Attendance System</h3>
+                <p class="project-summary">
+                  A production-ready, full-stack, AI-powered multi-student face-recognition attendance platform designed to automate attendance taking with zero manual roll-calls.
+                </p>
+
+                <div class="project-feature-list">
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>Real-Time Multi-Face Recognition:</strong> Leverages OpenCV and the SFace lightweight deep neural model for low-latency facial embedding extraction directly from live camera streams.</span>
+                  </div>
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>Anti-Spoofing & Rejection:</strong> Includes threshold tuning, confidence scoring, unknown-person rejection, and duplicate-attendance prevention.</span>
+                  </div>
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>Dynamic Academic Hierarchy:</strong> Structured database module for Academic Year, Course, Branch, Semester, Division, Class, and Subject with teacher and admin dashboards.</span>
+                  </div>
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>PWA Cloud Deployment:</strong> Built as an installable Progressive Web App (PWA) with HTTPS-enabled camera access hosted on Firebase Hosting + Render backend.</span>
+                  </div>
+                </div>
+
+                <div class="tech-tags">
+                  <span class="tag">React.js</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">OpenCV</span>
+                  <span class="tag">SFace AI Model</span>
+                  <span class="tag">Firebase Hosting</span>
+                  <span class="tag">Render Cloud</span>
+                  <span class="tag">PWA</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/sumitgawai2326/ai-smart-attendance-system" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-brands fa-github"></i>
+                    <span>View on GitHub</span>
+                  </a>
+                  <button class="btn btn-secondary btn-sm open-arch-modal" data-project="attendance">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <span>View Architecture Flow</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Architecture Preview Card -->
+              <div class="project-visual-box">
+                <div class="mockup-window">
+                  <div class="mockup-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="mockup-title">Smart Attendance System • Architecture Flow</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="arch-flow-mini">
+                      <div class="flow-step">
+                        <div class="flow-icon"><i class="fa-solid fa-video"></i></div>
+                        <span>Webcam Feed (PWA)</span>
+                      </div>
+                      <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                      <div class="flow-step highlight">
+                        <div class="flow-icon"><i class="fa-solid fa-brain"></i></div>
+                        <span>FastAPI + OpenCV + SFace</span>
+                      </div>
+                      <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                      <div class="flow-step">
+                        <div class="flow-icon"><i class="fa-solid fa-database"></i></div>
+                        <span>Attendance Ledger & DB</span>
+                      </div>
+                    </div>
+                    <div class="flow-stats">
+                      <div class="fstat">
+                        <span class="fval">99%+</span>
+                        <span class="flbl">Detection Accuracy</span>
+                      </div>
+                      <div class="fstat">
+                        <span class="fval">&lt;150ms</span>
+                        <span class="flbl">Inference Latency</span>
+                      </div>
+                      <div class="fstat">
+                        <span class="fval">Zero</span>
+                        <span class="flbl">Duplicate Logs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: CONSOLE-BASED BANKING SYSTEM WITH LIVE SIMULATOR -->
+          <div class="project-card feature-project">
+            <div class="project-banner">
+              <div class="project-badge-pill emerald">
+                <i class="fa-solid fa-terminal"></i> Core Python & OOP Project
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sumitgawai2326" target="_blank" rel="noopener noreferrer" class="icon-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-info">
+                <div class="project-subtitle">Feb 2026 – Present • OOP & File Persistence</div>
+                <h3 class="project-heading">Console-Based Banking System</h3>
+                <p class="project-summary">
+                  A resilient command-line banking application built with rigorous object-oriented design, persistent file storage, and real-time transaction verification.
+                </p>
+
+                <div class="project-feature-list">
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>4-Digit Secure PIN Authentication:</strong> Validated user sessions preventing unauthorized account access with lockout guards.</span>
+                  </div>
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>State Persistence:</strong> Implemented file-based JSON/text data serialization to prevent balance resets across system restarts.</span>
+                  </div>
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>Timestamped Audit Trail:</strong> Complete transactional ledger tracking deposit, withdrawal, and transfer events with timestamps.</span>
+                  </div>
+                  <div class="feature-bullet">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><strong>Fault-Tolerant Exception Handling:</strong> Robust input validation against invalid numerics, negative amounts, and file-corruption safeguards.</span>
+                  </div>
+                </div>
+
+                <div class="tech-tags">
+                  <span class="tag">Python 3</span>
+                  <span class="tag">Object-Oriented Programming</span>
+                  <span class="tag">File Persistence</span>
+                  <span class="tag">Structured Error Handling</span>
+                  <span class="tag">CLI Interface</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-emerald btn-sm" id="launchTerminalBtn">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Try Interactive Terminal Live</span>
+                  </button>
+                  <a href="https://github.com/sumitgawai2326" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Source on GitHub</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Simulated Terminal Preview Box -->
+              <div class="project-visual-box">
+                <div class="mockup-window terminal-window">
+                  <div class="mockup-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="mockup-title">terminal — python banking_system.py</span>
+                  </div>
+                  <div class="terminal-body" id="interactiveTerminal">
+                    <div class="term-line output">===========================================</div>
+                    <div class="term-line output highlight-term">  SUMIT'S SECURE BANKING SYSTEM v2.0  </div>
+                    <div class="term-line output">===========================================</div>
+                    <div class="term-line output info-term">[*] Storage backend: file_storage.json (ONLINE)</div>
+                    <div class="term-line output info-term">[*] Default Demo Account: 1001 | PIN: 1234</div>
+                    <div class="term-line prompt">
+                      <span class="term-ps">bank_cli&gt;</span>
+                      <span id="termLiveText">Type 'help' or click quick actions below...</span>
+                    </div>
+                    <div class="terminal-quick-actions">
+                      <button class="term-btn" onclick="executeTermCommand('help')">help</button>
+                      <button class="term-btn" onclick="executeTermCommand('login 1001 1234')">login (demo)</button>
+                      <button class="term-btn" onclick="executeTermCommand('balance')">balance</button>
+                      <button class="term-btn" onclick="executeTermCommand('deposit 2500')">deposit ₹2500</button>
+                      <button class="term-btn" onclick="executeTermCommand('history')">history</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & TIMELINE -->
+    <section id="education" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-subtitle">Academic pedigree and formal training in engineering, science, and computing.</p>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- B.Tech Card -->
+          <div class="timeline-card">
+            <div class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Sep 2025 – Jun 2029 (Graduating Class of 2029)</div>
+              <h3 class="timeline-institution">Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering & Technology (VPKBIET)</h3>
+              <div class="timeline-degree">Bachelor of Technology (B.Tech) in Artificial Intelligence & Data Science</div>
+              <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Baramati, Maharashtra, India</div>
+              
+              <!-- CGPA & Graduation Highlight Badges -->
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                <div class="score-badge">
+                  <i class="fa-solid fa-star"></i>
+                  <span>Current Academic Standing: <strong>8.60 CGPA</strong> / 10.0</span>
+                </div>
+                <div class="score-badge" style="background: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.3); color: #60a5fa;">
+                  <i class="fa-solid fa-flag-checkered"></i>
+                  <span>Graduation Year: <strong>2029</strong></span>
+                </div>
+              </div>
+
+              <p class="timeline-desc">
+                Focusing on core AI/ML mathematics, Computer Vision architectures, Data Structures & Algorithms, Object-Oriented Software Design, and Distributed Systems. Active participant in technical clubs, hackathons, and practical open-source project initiatives.
+              </p>
+              <div class="coursework-tags">
+                <span class="cw-tag">Artificial Intelligence</span>
+                <span class="cw-tag">Data Science</span>
+                <span class="cw-tag">Computer Vision</span>
+                <span class="cw-tag">Python & OOP</span>
+                <span class="cw-tag">Database Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HSC Card -->
+          <div class="timeline-card">
+            <div class="timeline-badge"><i class="fa-solid fa-school"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Jun 2024 – Feb 2025</div>
+              <h3 class="timeline-institution">Narmada Secondary & Higher Secondary Junior College</h3>
+              <div class="timeline-degree">Higher Secondary Certificate (HSC) — Science Stream</div>
+              <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mangrul, Maharashtra, India</div>
+              <div class="score-badge">
+                <i class="fa-solid fa-award"></i>
+                <span>Academic Distinction: <strong>83.50%</strong></span>
+              </div>
+              <p class="timeline-desc">
+                Rigorous foundations in Physics, Chemistry, Mathematics, and Computer Science concepts, graduating with first-class academic distinction.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & ACHIEVEMENTS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Continuous Upskilling</span>
+          <h2 class="section-title">Certifications & Credentials</h2>
+          <p class="section-subtitle">Verified certifications recognizing structured training in Generative AI, Python development, and C programming.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Gen AI Mastermind -->
+          <div class="card cert-card">
+            <div class="cert-top">
+              <div class="cert-icon-wrap purple">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <span class="cert-issuer">Outskill</span>
+            </div>
+            <h3 class="cert-title">2-Day Gen AI Mastermind</h3>
+            <p class="cert-desc">
+              Comprehensive deep-dive into Generative AI workflows, LLM prompting strategies, AI agent architectures, and real-world generative tool integrations.
+            </p>
+            <div class="cert-footer">
+              <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Completed & Verified</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Python for Beginners -->
+          <div class="card cert-card">
+            <div class="cert-top">
+              <div class="cert-icon-wrap blue">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="cert-issuer">SkillUp by Simplilearn</span>
+            </div>
+            <h3 class="cert-title">Python for Beginners</h3>
+            <p class="cert-desc">
+              Mastered foundational syntax, control flow, functions, modular programming, data structures, and file I/O pipelines in modern Python.
+            </p>
+            <div class="cert-footer">
+              <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Simplilearn Verified</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: C Programming Basics -->
+          <div class="card cert-card">
+            <div class="cert-top">
+              <div class="cert-icon-wrap emerald">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="cert-issuer">SkillUp by Simplilearn</span>
+            </div>
+            <h3 class="cert-title">C Programming Basics</h3>
+            <p class="cert-desc">
+              Fundamental structural programming in C, pointers, memory allocation, arrays, strings, and compilation dynamics (Issued Jan 2026).
+            </p>
+            <div class="cert-footer">
+              <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Issued Jan 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spoken Languages Box -->
+        <div class="languages-box card">
+          <div class="lang-header">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+              <h3>Multilingual Proficiency</h3>
+              <p>Effective communication across diverse team environments</p>
+            </div>
+          </div>
+          <div class="lang-list">
+            <div class="lang-pill">
+              <span class="lang-name">English</span>
+              <span class="lang-level">Proficient (Reading, Writing & Speaking)</span>
+            </div>
+            <div class="lang-pill">
+              <span class="lang-name">Marathi</span>
+              <span class="lang-level">Native</span>
+            </div>
+            <div class="lang-pill">
+              <span class="lang-name">Hindi</span>
+              <span class="lang-level">Fluent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACEMENT & RECRUITER CONTACT HUB -->
+    <section id="contact" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Placement & Recruitment Hub</h2>
+          <p class="section-subtitle">Interested in discussing an internship, technical role, or placement opportunity? Connect with me directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Info & Quick Copy -->
+          <div class="contact-info-card card">
+            <h3>Direct Contact Channels</h3>
+            <p>Feel free to reach out via phone, email, or connect with me on LinkedIn and GitHub.</p>
+
+            <div class="contact-items">
+              <!-- Email -->
+              <div class="contact-entry">
+                <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="c-details">
+                  <span class="c-label">Email Address</span>
+                  <span class="c-val" id="emailVal">sumitgawai269@gmail.com</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('sumitgawai269@gmail.com', 'Email copied to clipboard!')" title="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-entry">
+                <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="c-details">
+                  <span class="c-label">Phone / WhatsApp</span>
+                  <span class="c-val" id="phoneVal">+91 8999253421</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('+918999253421', 'Phone number copied to clipboard!')" title="Copy Phone">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="contact-entry">
+                <div class="c-icon"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="c-details">
+                  <span class="c-label">LinkedIn Profile</span>
+                  <a href="https://linkedin.com/in/sumit-gawai-867837373" target="_blank" rel="noopener noreferrer" class="c-link">
+                    linkedin.com/in/sumit-gawai-867837373 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="contact-entry">
+                <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="c-details">
+                  <span class="c-label">GitHub Profile</span>
+                  <a href="https://github.com/sumitgawai2326" target="_blank" rel="noopener noreferrer" class="c-link">
+                    github.com/sumitgawai2326 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-entry">
+                <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="c-details">
+                  <span class="c-label">Location</span>
+                  <span class="c-val">Baramati, Maharashtra, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download Resume CTA -->
+            <div class="contact-resume-box">
+              <h4>Ready for Technical Review?</h4>
+              <p>Download or print my formatted one-page candidate resume for your placement drive records.</p>
+              <button class="btn btn-primary btn-block open-resume-trigger">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>Open Placement Resume</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-card card">
+            <h3>Send a Message</h3>
+            <p>Leave a note or schedule a discussion regarding internships and projects.</p>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label for="senderName">Your Name / Recruiter Name *</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" id="senderName" required placeholder="e.g. Priya Sharma (Tech Recruiter)">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Your Official / Work Email *</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" id="senderEmail" required placeholder="e.g. priya.sharma@company.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderCompany">Organization / College / Company</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-building"></i>
+                  <input type="text" id="senderCompany" placeholder="e.g. TechCorp / Placement Cell">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message / Opportunity Details *</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-solid fa-message"></i>
+                  <textarea id="senderMessage" rows="4" required placeholder="Tell me about the role, project scope, or opportunity..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Direct Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Sumit<span class="highlight">.Gawai</span></span>
+        </a>
+        <p>B.Tech AI & Data Science • Class of 2029 (Current CGPA: 8.60) • VPKBIET Baramati</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/sumit-gawai-867837373" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/sumitgawai2326" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:sumitgawai269@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+918999253421" title="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Sumit Rajendra Gawai. Engineered with precision for AI/ML & Software Engineering Placements (Batch 2025–2029).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME PREVIEW & DOWNLOAD MODAL -->
+  <div class="modal-backdrop" id="resumeModal">
+    <div class="modal-container resume-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-file-invoice modal-icon"></i>
+          <div>
+            <h3>Candidate Resume — Sumit Rajendra Gawai</h3>
+            <span class="modal-sub">Placement-Ready Candidate Profile (B.Tech AI & DS • Graduating 2029 • CGPA 8.60)</span>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-sm btn-outline" onclick="window.print()" title="Print / Save as PDF">
+            <i class="fa-solid fa-print"></i> Print / PDF
+          </button>
+          <button class="modal-close-btn" id="closeResumeModal" title="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body printable-resume">
+        <!-- Resume Document Body -->
+        <div class="resume-sheet">
+          <!-- Header -->
+          <header class="resume-header">
+            <h1 class="r-name">SUMIT RAJENDRA GAWAI</h1>
+            <div class="r-contact-line">
+              <span><i class="fa-solid fa-phone"></i> +91 8999253421</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-envelope"></i> sumitgawai269@gmail.com</span>
+              <span>•</span>
+              <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/sumit-gawai-867837373</span>
+              <span>•</span>
+              <span><i class="fa-brands fa-github"></i> github.com/sumitgawai2326</span>
+            </div>
+            <div class="r-location"><i class="fa-solid fa-location-dot"></i> Baramati, Maharashtra, India</div>
+          </header>
+
+          <hr class="r-divider">
+
+          <!-- Career Objective -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Career Objective</h2>
+            <p class="r-text">
+              First-year B.Tech (AI & Data Science) student (CGPA: 8.60, Graduating 2029) with a strong foundation in Python, machine learning and computer vision, seeking an internship/placement opportunity to apply and grow practical AI/ML and full-stack development skills on real-world problems.
+            </p>
+          </section>
+
+          <!-- Education -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Education</h2>
+            <div class="r-entry">
+              <div class="r-entry-head">
+                <strong>Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering & Technology (VPKBIET)</strong>
+                <span class="r-loc">Baramati, India</span>
+              </div>
+              <div class="r-entry-sub">
+                <em>B.Tech in Artificial Intelligence and Data Science — <strong>CGPA: 8.60 / 10.0</strong></em>
+                <span class="r-date">Sep 2025 – Jun 2029</span>
+              </div>
+            </div>
+            <div class="r-entry">
+              <div class="r-entry-head">
+                <strong>Narmada Secondary and Higher Secondary Junior College</strong>
+                <span class="r-loc">Mangrul, India</span>
+              </div>
+              <div class="r-entry-sub">
+                <em>HSC (Science) – <strong>83.50%</strong></em>
+                <span class="r-date">Jun 2024 – Feb 2025</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Technical Skills -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Technical Skills</h2>
+            <ul class="r-skills-list">
+              <li><strong>Languages:</strong> Python, C (Basic), Java (Basic)</li>
+              <li><strong>Tools & Platforms:</strong> Git, GitHub, Render, Firebase Hosting</li>
+              <li><strong>Concepts:</strong> Object-Oriented Programming, File Handling, Error Handling, Problem Solving</li>
+              <li><strong>Soft Skills:</strong> Communication, Presentation, Strategy</li>
+            </ul>
+          </section>
+
+          <!-- Projects -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Projects</h2>
+            
+            <div class="r-project-item">
+              <div class="r-entry-head">
+                <strong>AI-Based Smart Attendance System</strong> | <span class="r-tech">React.js, FastAPI, OpenCV, SFace, Firebase</span>
+                <span class="r-loc">Personal Project</span>
+              </div>
+              <ul class="r-bullets">
+                <li>Built a full-stack, AI-powered multi-student face-recognition attendance platform with real-time camera-based detection, unknown-person rejection and duplicate-attendance prevention.</li>
+                <li>Designed a dynamic academic management module (academic year, course, branch, semester, division, class, subject) alongside teacher and admin dashboards.</li>
+                <li>Tuned recognition thresholds and confidence checks to prevent misassignment of student identities across multi-face scenarios.</li>
+                <li>Deployed as an installable PWA with HTTPS-enabled camera access on Firebase Hosting + Render, accessible from any device or network.</li>
+                <li><strong>Repository:</strong> github.com/sumitgawai2326/ai-smart-attendance-system</li>
+              </ul>
+            </div>
+
+            <div class="r-project-item">
+              <div class="r-entry-head">
+                <strong>Console-Based Banking System</strong> | <span class="r-tech">Python, OOP, File Handling</span>
+                <span class="r-date">Feb 2026 – Present</span>
+              </div>
+              <ul class="r-bullets">
+                <li>Developed a command-line banking application supporting 4-digit PIN authentication, deposits/withdrawals and real-time balance updates.</li>
+                <li>Implemented persistent, file-based data storage to fix balance resets across program restarts, plus timestamped transaction history logging.</li>
+                <li>Applied object-oriented design and structured error handling to build a robust, restart-safe application.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Certifications -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Certifications</h2>
+            <ul class="r-cert-list">
+              <li><strong>Python for Beginners</strong> – SkillUp by Simplilearn</li>
+              <li><strong>C Programming Basics</strong> – SkillUp by Simplilearn (Jan 2026)</li>
+              <li><strong>2-Day Gen AI Mastermind</strong> – Outskill</li>
+            </ul>
+          </section>
+
+          <!-- Languages -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Languages</h2>
+            <p class="r-text">
+              <strong>Marathi:</strong> Native &nbsp;|&nbsp; <strong>Hindi:</strong> Fluent &nbsp;|&nbsp; <strong>English:</strong> Proficient — Reading, Writing & Speaking
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURE MODAL -->
+  <div class="modal-backdrop" id="archModal">
+    <div class="modal-container arch-modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-sitemap modal-icon"></i>
+          <div>
+            <h3 id="archModalTitle">System Architecture: AI-Based Smart Attendance System</h3>
+            <span class="modal-sub">Deep-dive technical workflow and computer vision pipeline</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeArchModal" title="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="arch-deepdive">
+          <div class="arch-step-card">
+            <div class="step-num">1</div>
+            <div class="step-desc">
+              <h4>PWA Camera Stream Acquisition</h4>
+              <p>The client-side React.js PWA requests HTTPS camera permissions and captures real-time video frames (30fps) with multi-student viewing angle normalization.</p>
+            </div>
+          </div>
+
+          <div class="arch-step-card">
+            <div class="step-num">2</div>
+            <div class="step-desc">
+              <h4>FastAPI REST & OpenCV Pipeline</h4>
+              <p>Frames are sent asynchronously to FastAPI. OpenCV performs face bounding box localization and crops each detected face ROI.</p>
+            </div>
+          </div>
+
+          <div class="arch-step-card">
+            <div class="step-num">3</div>
+            <div class="step-desc">
+              <h4>SFace Deep Feature Extraction & Matching</h4>
+              <p>SFace neural network generates 128-d feature embeddings. Cosine similarity compares the live vectors against registered student embeddings with strict threshold checks.</p>
+            </div>
+          </div>
+
+          <div class="arch-step-card">
+            <div class="step-num">4</div>
+            <div class="step-desc">
+              <h4>Verification, Anti-Duplicate & Ledger Recording</h4>
+              <p>Unknown faces are rejected. Verified identities are checked against the current lecture session to prevent duplicate marking, then logged to the database ledger.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-tech-grid">
+          <div class="atg-item"><strong>Frontend:</strong> React.js, Tailwind, PWA Service Workers</div>
+          <div class="atg-item"><strong>Backend:</strong> Python 3, FastAPI, Uvicorn</div>
+          <div class="atg-item"><strong>AI/CV:</strong> OpenCV, SFace Deep Neural Model</div>
+          <div class="atg-item"><strong>Hosting:</strong> Firebase Hosting (Frontend) + Render (Backend)</div>
+          <div class="atg-item" style="grid-column: span 2;">
+            <strong>GitHub Repository:</strong> 
+            <a href="https://github.com/sumitgawai2326/ai-smart-attendance-system" target="_blank" rel="noopener noreferrer" style="color: #38bdf8;">
+              github.com/sumitgawai2326/ai-smart-attendance-system
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
