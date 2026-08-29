@@ -2289,6 +2289,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    PRINT STYLES - ULTRA CLEAN 1-PAGE RESUME PRINTING
    ========================================================================== */
+/* ==========================================================================
+   PRINT STYLES - ULTRA CLEAN 1-PAGE RESUME PRINTING
+   ========================================================================== */
 @media print {
   @page {
     margin: 10mm 12mm;
@@ -4188,34 +4191,80 @@ function showToast(message) {
 }
 
 /* ==========================================================================
-   CONTACT FORM HANDLER
+   REAL EMAIL DISPATCH HANDLER (Delivers to sumitgawai269@gmail.com)
    ========================================================================== */
-window.handleContactSubmit = function(e) {
+window.handleContactSubmit = async function(e) {
   e.preventDefault();
   const name = document.getElementById('senderName').value;
   const email = document.getElementById('senderEmail').value;
-  const company = document.getElementById('senderCompany').value || 'N/A';
+  const company = document.getElementById('senderCompany').value || 'Individual / Recruiter';
   const message = document.getElementById('senderMessage').value;
 
   const submitBtn = document.getElementById('submitBtn');
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending Message...</span>`;
+    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Delivering to Inbox...</span>`;
   }
 
-  // Simulate network dispatch
-  setTimeout(() => {
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/sumitgawai269@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        "Recruiter Name": name,
+        "Work Email": email,
+        "Organization / Company": company,
+        "Message": message,
+        "_subject": `🚀 New Portfolio Message from ${name} (${company})`,
+        "_template": "table",
+        "_captcha": "false"
+      })
+    });
+
+    const result = await response.json();
+
+    if (response.ok && (result.success === "true" || result.success === true || result.message)) {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Message Sent to Sumit!</span>`;
+        setTimeout(() => {
+          submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Send Direct Message</span>`;
+        }, 4000);
+      }
+      showToast(`Thank you, ${name}! Your message has been sent to sumitgawai269@gmail.com.`);
+      document.getElementById('contactForm').reset();
+    } else {
+      throw new Error(result.message || "Failed to deliver");
+    }
+  } catch (err) {
+    console.warn("Dispatching via fallback mailto: ", err);
+    
+    // Automatic fallback: opens default mail client with prefilled details
+    const mailSubject = encodeURIComponent(`Portfolio Inquiry: ${name} (${company})`);
+    const mailBody = encodeURIComponent(`Hi Sumit,
+
+Name: ${name}
+Email: ${email}
+Company: ${company}
+
+Message:
+${message}
+
+Sent from Portfolio Website`);
+    window.open(`mailto:sumitgawai269@gmail.com?subject=${mailSubject}&body=${mailBody}`, '_blank');
+
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Message Sent Successfully!</span>`;
+      submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Email Client Opened</span>`;
       setTimeout(() => {
         submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Send Direct Message</span>`;
       }, 3000);
     }
-
-    showToast(`Thank you, ${name}! Your inquiry has been sent to Sumit.`);
-    document.getElementById('contactForm').reset();
-  }, 900);
+    showToast(`Redirecting to your mail client to send to sumitgawai269@gmail.com.`);
+  }
 };
 
 /* ==========================================================================
