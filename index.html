@@ -25,8 +25,7 @@
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Stylesheet -->
-    <!-- Inlined Stylesheet for Instant Loading & 100% Deployment Reliability -->
+  <!-- Inlined Stylesheet for Instant Loading & 100% Reliable Deployment -->
   <style>
 /* ==========================================================================
    SUMIT RAJENDRA GAWAI - PLACEMENT & RECRUITER PORTFOLIO
@@ -2275,37 +2274,237 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Print Stylesheet for Resume */
+/* ==========================================================================
+   PRINT STYLES - ULTRA CLEAN 1-PAGE RESUME PRINTING
+   ========================================================================== */
 @media print {
-  body * {
-    visibility: hidden;
+  @page {
+    margin: 10mm 12mm;
+    size: A4 portrait;
   }
-  .printable-resume, .printable-resume * {
-    visibility: visible;
+
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Completely remove the main landing page flow from print layout */
+  header, 
+  main, 
+  footer, 
+  #ambient-canvas, 
+  .navbar-wrapper, 
+  .hero-section, 
+  .section, 
+  .modal-header, 
+  .toast-container,
+  .quick-connect-bar,
+  .hero-cta-group,
+  .nav-actions {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Show ONLY the resume modal body */
+  .modal-backdrop, 
+  #resumeModal {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .modal-container, 
+  .resume-modal {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  .modal-body, 
   .printable-resume {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    display: block !important;
+    visibility: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    max-height: none !important;
   }
-  .modal-backdrop, .modal-container {
-    position: static;
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+
+  .resume-sheet {
+    display: block !important;
+    visibility: visible !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
-  .modal-header, .navbar-wrapper, .footer, #ambient-canvas {
+
+  .resume-sheet * {
+    visibility: visible !important;
+  }
+
+  .resume-header {
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #1e293b !important;
+  }
+
+  .r-name {
+    font-size: 18pt !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px !important;
+  }
+
+  .r-contact-line {
+    font-size: 8.5pt !important;
+    color: #334155 !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .r-location {
+    font-size: 8.5pt !important;
+    color: #475569 !important;
+  }
+
+  .r-divider {
     display: none !important;
   }
-  .resume-sheet {
-    box-shadow: none;
-    padding: 10mm 15mm;
+
+  .r-section {
+    margin-bottom: 10px !important;
+    page-break-inside: avoid;
+  }
+
+  .r-sec-title {
+    font-size: 10.5pt !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #cbd5e1 !important;
+    padding-bottom: 2px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .r-text {
+    font-size: 9pt !important;
+    line-height: 1.35 !important;
+    color: #334155 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .r-entry {
+    margin-bottom: 6px !important;
+  }
+
+  .r-entry-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5pt !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+  }
+
+  .r-entry-sub {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt !important;
+    color: #475569 !important;
+    margin-bottom: 2px;
+  }
+
+  .r-loc, .r-date {
+    font-size: 8.5pt !important;
+    color: #64748b !important;
+    font-weight: normal !important;
+  }
+
+  .r-skills-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .r-skills-list li {
+    margin-bottom: 2px !important;
+  }
+
+  .r-project-item {
+    margin-bottom: 8px !important;
+    page-break-inside: avoid;
+  }
+
+  .r-bullets {
+    margin: 3px 0 0 16px !important;
+    padding: 0 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .r-bullets li {
+    margin-bottom: 2px !important;
+    color: #334155 !important;
+  }
+
+  .r-cert-list {
+    margin: 3px 0 0 16px !important;
+    padding: 0 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .r-cert-list li {
+    margin-bottom: 2px !important;
   }
 }
-
   </style>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -2337,10 +2536,14 @@ h1, h2, h3, h4, h5, h6 {
           <i class="fa-solid fa-sun light-icon"></i>
         </button>
 
-        <!-- Resume Modal Trigger -->
-        <button id="resumeModalBtn" class="btn btn-outline btn-sm">
-          <i class="fa-solid fa-file-pdf"></i>
-          <span>Resume</span>
+        <!-- Direct PDF Download & Modal Trigger -->
+        <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" download="Sumit_Rajendra_Gawai_Resume.pdf" class="btn btn-primary btn-sm" title="Download Official PDF Resume">
+          <i class="fa-solid fa-download"></i>
+          <span>Resume PDF</span>
+        </a>
+        <button id="resumeModalBtn" class="btn btn-outline btn-sm" title="View Printable Resume">
+          <i class="fa-solid fa-eye"></i>
+          <span>Preview</span>
         </button>
 
         <!-- Mobile Hamburger Toggle -->
@@ -2384,9 +2587,13 @@ h1, h2, h3, h4, h5, h6 {
               <i class="fa-solid fa-laptop-code"></i>
               <span>Explore Projects</span>
             </a>
-            <button class="btn btn-secondary open-resume-trigger">
+            <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" download="Sumit_Rajendra_Gawai_Resume.pdf" class="btn btn-secondary">
               <i class="fa-solid fa-file-arrow-down"></i>
-              <span>View / Download Resume</span>
+              <span>Download PDF Resume</span>
+            </a>
+            <button class="btn btn-outline open-resume-trigger">
+              <i class="fa-solid fa-eye"></i>
+              <span>View Resume</span>
             </button>
             <a href="#contact" class="btn btn-ghost">
               <i class="fa-solid fa-paper-plane"></i>
@@ -2416,7 +2623,7 @@ h1, h2, h3, h4, h5, h6 {
           </div>
         </div>
 
-        <!-- Right Hero Visual with Photo (Cleaned - Floating badges removed) -->
+        <!-- Right Hero Visual with Photo -->
         <div class="hero-visual">
           <div class="photo-glow-wrapper">
             <div class="ambient-glow-circle"></div>
@@ -2783,7 +2990,7 @@ h1, h2, h3, h4, h5, h6 {
 
         <div class="projects-list">
           
-          <!-- PROJECT 1: AI-BASED SMART ATTENDANCE SYSTEM (With direct GitHub Repo Link) -->
+          <!-- PROJECT 1: AI-BASED SMART ATTENDANCE SYSTEM -->
           <div class="project-card feature-project">
             <div class="project-banner">
               <div class="project-badge-pill">
@@ -3221,11 +3428,17 @@ h1, h2, h3, h4, h5, h6 {
             <!-- Download Resume CTA -->
             <div class="contact-resume-box">
               <h4>Ready for Technical Review?</h4>
-              <p>Download or print my formatted one-page candidate resume for your placement drive records.</p>
-              <button class="btn btn-primary btn-block open-resume-trigger">
-                <i class="fa-solid fa-file-pdf"></i>
-                <span>Open Placement Resume</span>
-              </button>
+              <p>Download the official candidate resume PDF directly or preview the formatted printable sheet.</p>
+              <div style="display: flex; gap: 10px; margin-top: 12px;">
+                <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" download="Sumit_Rajendra_Gawai_Resume.pdf" class="btn btn-primary btn-block" style="text-align: center; text-decoration: none;">
+                  <i class="fa-solid fa-download"></i>
+                  <span>Download PDF</span>
+                </a>
+                <button class="btn btn-secondary btn-block open-resume-trigger">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>Preview Sheet</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -3323,8 +3536,11 @@ h1, h2, h3, h4, h5, h6 {
           </div>
         </div>
         <div class="modal-actions">
-          <button class="btn btn-sm btn-outline" onclick="window.print()" title="Print / Save as PDF">
-            <i class="fa-solid fa-print"></i> Print / PDF
+          <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" download="Sumit_Rajendra_Gawai_Resume.pdf" class="btn btn-sm btn-primary" title="Download Official PDF File">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+          <button class="btn btn-sm btn-outline" onclick="window.print()" title="Print Clean Sheet">
+            <i class="fa-solid fa-print"></i> Print Sheet
           </button>
           <button class="modal-close-btn" id="closeResumeModal" title="Close">
             <i class="fa-solid fa-xmark"></i>
@@ -3349,8 +3565,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
             <div class="r-location"><i class="fa-solid fa-location-dot"></i> Baramati, Maharashtra, India</div>
           </header>
-
-          <hr class="r-divider">
 
           <!-- Career Objective -->
           <section class="r-section">
@@ -3518,8 +3732,7 @@ h1, h2, h3, h4, h5, h6 {
   <!-- TOAST NOTIFICATION CONTAINER -->
   <div id="toastContainer" class="toast-container"></div>
 
-  <!-- JavaScript -->
-    <!-- Inlined JavaScript Engine -->
+  <!-- Inlined JavaScript Engine -->
   <script>
 /* ==========================================================================
    SUMIT RAJENDRA GAWAI - PLACEMENT PORTFOLIO
