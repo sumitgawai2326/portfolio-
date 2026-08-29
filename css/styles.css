@@ -671,9 +671,10 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 24px 36px;
-  backdrop-filter: blur(16px);
+  padding: 24px 32px;
   box-shadow: var(--shadow-md);
+  backdrop-filter: blur(16px);
+  margin-top: 40px;
 }
 
 .metric-item {
@@ -2186,9 +2187,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .metrics-strip {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(16px);
+  margin-top: 40px;
+}
 
   .metric-divider {
     display: none;
@@ -2245,6 +2254,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Print Stylesheet for Resume */
+/* ==========================================================================
+   PRINT STYLES - ULTRA CLEAN 1-PAGE RESUME PRINTING
+   ========================================================================== */
 /* ==========================================================================
    PRINT STYLES - ULTRA CLEAN 1-PAGE RESUME PRINTING
    ========================================================================== */
