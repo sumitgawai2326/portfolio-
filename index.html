@@ -3446,16 +3446,18 @@ h1, h2, h3, h4, h5, h6 {
             <h3>Send a Message</h3>
             <p>Leave a note or schedule a discussion regarding internships and projects.</p>
 
-                        <form id="contactForm" name="contact" method="POST" action="https://formsubmit.co/sumitgawai269@gmail.com" onsubmit="handleContactSubmit(event)" data-netlify="true">
-              <input type="hidden" name="_captcha" value="false">
+                                    <form id="contactForm" action="https://formsubmit.co/sumitgawai269@gmail.com" method="POST">
+              <!-- FormSubmit Direct Email Forwarding Configuration -->
+              <input type="hidden" name="_subject" value="🚀 New Placement Inquiry for Sumit Rajendra Gawai">
               <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_subject" value="New Portfolio Message for Sumit">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://sumitgawai.netlify.app/#contact">
 
               <div class="form-group">
                 <label for="senderName">Your Name / Recruiter Name *</label>
                 <div class="input-wrap">
                   <i class="fa-solid fa-user"></i>
-                  <input type="text" id="senderName" name="name" required placeholder="e.g. Priya Sharma (Tech Recruiter)">
+                  <input type="text" id="senderName" name="Recruiter_Name" required placeholder="e.g. Priya Sharma (Tech Recruiter)">
                 </div>
               </div>
 
@@ -3463,7 +3465,7 @@ h1, h2, h3, h4, h5, h6 {
                 <label for="senderEmail">Your Official / Work Email *</label>
                 <div class="input-wrap">
                   <i class="fa-solid fa-envelope"></i>
-                  <input type="email" id="senderEmail" name="email" required placeholder="e.g. priya.sharma@company.com">
+                  <input type="email" id="senderEmail" name="Work_Email" required placeholder="e.g. priya.sharma@company.com">
                 </div>
               </div>
 
@@ -3471,7 +3473,7 @@ h1, h2, h3, h4, h5, h6 {
                 <label for="senderCompany">Organization / College / Company</label>
                 <div class="input-wrap">
                   <i class="fa-solid fa-building"></i>
-                  <input type="text" id="senderCompany" name="company" placeholder="e.g. TechCorp / Placement Cell">
+                  <input type="text" id="senderCompany" name="Organization_Company" placeholder="e.g. TechCorp / Placement Cell">
                 </div>
               </div>
 
@@ -3479,20 +3481,14 @@ h1, h2, h3, h4, h5, h6 {
                 <label for="senderMessage">Message / Opportunity Details *</label>
                 <div class="input-wrap textarea-wrap">
                   <i class="fa-solid fa-message"></i>
-                  <textarea id="senderMessage" name="message" rows="4" required placeholder="Tell me about the role, project scope, or opportunity..."></textarea>
+                  <textarea id="senderMessage" name="Message_Details" rows="4" required placeholder="Tell me about the role, project scope, or opportunity..."></textarea>
                 </div>
               </div>
 
-              <div style="display: flex; flex-direction: column; gap: 10px;">
-                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <span>Send Direct Message</span>
-                </button>
-                <button type="button" class="btn btn-outline btn-block" onclick="sendViaMailClient()" style="text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                  <i class="fa-solid fa-envelope-open-text"></i>
-                  <span>Open in Gmail / Email App</span>
-                </button>
-              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Direct Message to Email</span>
+              </button>
             </form>
           </div>
         </div>
