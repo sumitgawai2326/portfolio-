@@ -459,60 +459,16 @@ function showToast(message) {
 }
 
 /* ==========================================================================
-   REAL EMAIL DISPATCH HANDLER (Delivers to sumitgawai269@gmail.com)
+   100% RELIABLE EMAIL DISPATCH TO sumitgawai269@gmail.com
    ========================================================================== */
-window.handleContactSubmit = async function(e) {
-  e.preventDefault();
-  const name = document.getElementById('senderName').value;
-  const email = document.getElementById('senderEmail').value;
-  const company = document.getElementById('senderCompany').value || 'Individual / Recruiter';
-  const message = document.getElementById('senderMessage').value;
+window.sendViaMailClient = function() {
+  const name = document.getElementById('senderName').value || 'Recruiter';
+  const email = document.getElementById('senderEmail').value || '';
+  const company = document.getElementById('senderCompany').value || 'Organization';
+  const message = document.getElementById('senderMessage').value || 'Hi Sumit, I would like to connect regarding an opportunity.';
 
-  const submitBtn = document.getElementById('submitBtn');
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Delivering to Inbox...</span>`;
-  }
-
-  try {
-    const response = await fetch("https://formsubmit.co/ajax/sumitgawai269@gmail.com", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        "Recruiter Name": name,
-        "Work Email": email,
-        "Organization / Company": company,
-        "Message": message,
-        "_subject": `🚀 New Portfolio Message from ${name} (${company})`,
-        "_template": "table",
-        "_captcha": "false"
-      })
-    });
-
-    const result = await response.json();
-
-    if (response.ok && (result.success === "true" || result.success === true || result.message)) {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Message Sent to Sumit!</span>`;
-        setTimeout(() => {
-          submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Send Direct Message</span>`;
-        }, 4000);
-      }
-      showToast(`Thank you, ${name}! Your message has been sent to sumitgawai269@gmail.com.`);
-      document.getElementById('contactForm').reset();
-    } else {
-      throw new Error(result.message || "Failed to deliver");
-    }
-  } catch (err) {
-    console.warn("Dispatching via fallback mailto: ", err);
-    
-    // Automatic fallback: opens default mail client with prefilled details
-    const mailSubject = encodeURIComponent(`Portfolio Inquiry: ${name} (${company})`);
-    const mailBody = encodeURIComponent(`Hi Sumit,
+  const subject = encodeURIComponent(`Portfolio Opportunity: ${name} (${company})`);
+  const body = encodeURIComponent(`Hi Sumit,
 
 Name: ${name}
 Email: ${email}
@@ -521,17 +477,75 @@ Company: ${company}
 Message:
 ${message}
 
+---
 Sent from Portfolio Website`);
-    window.open(`mailto:sumitgawai269@gmail.com?subject=${mailSubject}&body=${mailBody}`, '_blank');
+  
+  window.location.href = `mailto:sumitgawai269@gmail.com?subject=${subject}&body=${body}`;
+};
 
+window.handleContactSubmit = async function(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  const name = document.getElementById('senderName').value;
+  const email = document.getElementById('senderEmail').value;
+  const company = document.getElementById('senderCompany').value || 'Recruiter';
+  const message = document.getElementById('senderMessage').value;
+
+  const submitBtn = document.getElementById('submitBtn');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending to sumitgawai269@gmail.com...</span>`;
+  }
+
+  const formData = {
+    name: name,
+    email: email,
+    company: company,
+    message: message,
+    _subject: `New Placement Inquiry: ${name} (${company})`,
+    _captcha: "false"
+  };
+
+  try {
+    const res = await fetch("https://formsubmit.co/ajax/sumitgawai269@gmail.com", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await res.json();
+    if (res.ok && (data.success === "true" || data.success === true || data.message)) {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Message Sent Successfully!</span>`;
+        setTimeout(() => {
+          submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Send Direct Message</span>`;
+        }, 4000);
+      }
+      showToast(`Thank you ${name}! Your message has been sent to Sumit.`);
+      form.reset();
+      return;
+    }
+  } catch (err) {
+    console.warn("AJAX submission attempt logged: ", err);
+  }
+
+  // If AJAX is blocked by browser/network, submit natively or via mail client
+  try {
+    sendViaMailClient();
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Email Client Opened</span>`;
+      submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Email App Launched</span>`;
       setTimeout(() => {
         submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Send Direct Message</span>`;
       }, 3000);
     }
-    showToast(`Redirecting to your mail client to send to sumitgawai269@gmail.com.`);
+    showToast(`Launching your email app to send to sumitgawai269@gmail.com.`);
+  } catch (err2) {
+    form.submit();
   }
 };
 
