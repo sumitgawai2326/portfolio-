@@ -2784,26 +2784,27 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </section>
 
-    <!-- TECHNICAL SKILLS MATRIX -->
+        <!-- TECHNICAL SKILLS MATRIX (Matched 1-to-1 with Verified Resume) -->
     <section id="skills" class="section bg-alt">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Technical Competencies</span>
           <h2 class="section-title">Skills & Technologies</h2>
-          <p class="section-subtitle">Categorized breakdown of programming languages, frameworks, developer tools, and core computer science fundamentals.</p>
+          <p class="section-subtitle">Verified technical competencies, tools, software concepts, and professional strengths matching academic and placement credentials.</p>
         </div>
 
-        <!-- Filter Tabs -->
+        <!-- Filter Tabs strictly matching Resume categories -->
         <div class="skills-tabs">
           <button class="skill-tab active" data-category="all">All Skills</button>
           <button class="skill-tab" data-category="languages">Languages</button>
-          <button class="skill-tab" data-category="aiml">AI / ML & Vision</button>
-          <button class="skill-tab" data-category="web">Web & Backend</button>
-          <button class="skill-tab" data-category="tools">Tools & DevOps</button>
-          <button class="skill-tab" data-category="concepts">Core Concepts</button>
+          <button class="skill-tab" data-category="tools">Tools & Platforms</button>
+          <button class="skill-tab" data-category="concepts">Concepts</button>
+          <button class="skill-tab" data-category="soft">Soft Skills</button>
         </div>
 
         <div class="skills-grid" id="skillsGrid">
+          
+          <!-- ================= LANGUAGES ================= -->
           <!-- Python -->
           <div class="skill-card" data-cat="languages">
             <div class="skill-header">
@@ -2813,13 +2814,13 @@ h1, h2, h3, h4, h5, h6 {
                 <span class="skill-badge primary">Primary Language</span>
               </div>
             </div>
-            <p class="skill-desc">Core language for AI/ML pipelines, OpenCV vision processing, FastAPI backend services, OOP, and data scripting.</p>
+            <p class="skill-desc">Core language for AI/ML pipelines, computer vision systems, OOP design, and backend scripting.</p>
             <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 90%;"></div>
+              <div class="bar-fill" style="width: 92%;"></div>
             </div>
           </div>
 
-          <!-- C Programming -->
+          <!-- C (Basic) -->
           <div class="skill-card" data-cat="languages">
             <div class="skill-header">
               <i class="fa-solid fa-c skill-logo" style="color: #818cf8;"></i>
@@ -2828,13 +2829,13 @@ h1, h2, h3, h4, h5, h6 {
                 <span class="skill-badge">Certified</span>
               </div>
             </div>
-            <p class="skill-desc">Memory layout understanding, pointers, structural programming, and foundational algorithmic thinking.</p>
+            <p class="skill-desc">Structured procedural programming, memory layout, pointers, arrays, and algorithmic foundations.</p>
             <div class="skill-level-bar">
               <div class="bar-fill" style="width: 75%;"></div>
             </div>
           </div>
 
-          <!-- Java -->
+          <!-- Java (Basic) -->
           <div class="skill-card" data-cat="languages">
             <div class="skill-header">
               <i class="fa-brands fa-java skill-logo" style="color: #f97316;"></i>
@@ -2843,87 +2844,13 @@ h1, h2, h3, h4, h5, h6 {
                 <span class="skill-badge">Core OOP</span>
               </div>
             </div>
-            <p class="skill-desc">Object-oriented paradigms, classes, inheritance, polymorphism, and Java application fundamentals.</p>
+            <p class="skill-desc">Object-oriented paradigms, classes, inheritance, polymorphism, and Java fundamentals.</p>
             <div class="skill-level-bar">
               <div class="bar-fill" style="width: 70%;"></div>
             </div>
           </div>
 
-          <!-- OpenCV & SFace -->
-          <div class="skill-card" data-cat="aiml">
-            <div class="skill-header">
-              <i class="fa-solid fa-camera-retro skill-logo" style="color: #10b981;"></i>
-              <div>
-                <h4 class="skill-name">OpenCV & SFace</h4>
-                <span class="skill-badge emerald">Computer Vision</span>
-              </div>
-            </div>
-            <p class="skill-desc">Real-time video frame processing, face feature vector extraction, confidence scoring, and anti-misassignment checks.</p>
-            <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 88%;"></div>
-            </div>
-          </div>
-
-          <!-- Machine Learning -->
-          <div class="skill-card" data-cat="aiml">
-            <div class="skill-header">
-              <i class="fa-solid fa-network-wired skill-logo" style="color: #a855f7;"></i>
-              <div>
-                <h4 class="skill-name">AI & Machine Learning</h4>
-                <span class="skill-badge purple">Core Discipline</span>
-              </div>
-            </div>
-            <p class="skill-desc">Data preprocessing, model inference pipelines, threshold calibration, and generative AI workflow integration.</p>
-            <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 82%;"></div>
-            </div>
-          </div>
-
-          <!-- React.js -->
-          <div class="skill-card" data-cat="web">
-            <div class="skill-header">
-              <i class="fa-brands fa-react skill-logo" style="color: #06b6d4;"></i>
-              <div>
-                <h4 class="skill-name">React.js</h4>
-                <span class="skill-badge cyan">Frontend</span>
-              </div>
-            </div>
-            <p class="skill-desc">Component-driven UI, state management, webcam integration, dynamic dashboards, and responsive layout styling.</p>
-            <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 80%;"></div>
-            </div>
-          </div>
-
-          <!-- FastAPI -->
-          <div class="skill-card" data-cat="web">
-            <div class="skill-header">
-              <i class="fa-solid fa-bolt skill-logo" style="color: #059669;"></i>
-              <div>
-                <h4 class="skill-name">FastAPI</h4>
-                <span class="skill-badge emerald">REST Backend</span>
-              </div>
-            </div>
-            <p class="skill-desc">High-performance asynchronous Python REST APIs, endpoint validation, CORS management, and model serving.</p>
-            <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 85%;"></div>
-            </div>
-          </div>
-
-          <!-- Firebase & Render -->
-          <div class="skill-card" data-cat="tools">
-            <div class="skill-header">
-              <i class="fa-solid fa-server skill-logo" style="color: #eab308;"></i>
-              <div>
-                <h4 class="skill-name">Firebase & Render</h4>
-                <span class="skill-badge yellow">Cloud & Hosting</span>
-              </div>
-            </div>
-            <p class="skill-desc">Production hosting for client-side PWAs on Firebase Hosting, combined with containerized backend services on Render.</p>
-            <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 82%;"></div>
-            </div>
-          </div>
-
+          <!-- ================= TOOLS & PLATFORMS ================= -->
           <!-- Git & GitHub -->
           <div class="skill-card" data-cat="tools">
             <div class="skill-header">
@@ -2933,56 +2860,134 @@ h1, h2, h3, h4, h5, h6 {
                 <span class="skill-badge">Version Control</span>
               </div>
             </div>
-            <p class="skill-desc">Version control, branch management, collaborative code review workflows, and GitHub repository maintenance.</p>
+            <p class="skill-desc">Distributed version control, branch management, collaboration workflows, and repository maintenance.</p>
             <div class="skill-level-bar">
               <div class="bar-fill" style="width: 85%;"></div>
             </div>
           </div>
 
+          <!-- Render -->
+          <div class="skill-card" data-cat="tools">
+            <div class="skill-header">
+              <i class="fa-solid fa-cloud-arrow-up skill-logo" style="color: #00C7B7;"></i>
+              <div>
+                <h4 class="skill-name">Render</h4>
+                <span class="skill-badge cyan">Cloud Backend</span>
+              </div>
+            </div>
+            <p class="skill-desc">Cloud web service deployment, production environment variables, and live server hosting.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- Firebase Hosting -->
+          <div class="skill-card" data-cat="tools">
+            <div class="skill-header">
+              <i class="fa-solid fa-fire skill-logo" style="color: #f59e0b;"></i>
+              <div>
+                <h4 class="skill-name">Firebase Hosting</h4>
+                <span class="skill-badge yellow">Cloud Hosting</span>
+              </div>
+            </div>
+            <p class="skill-desc">Production hosting for installable client-side PWAs and fast global CDN asset delivery.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- ================= CORE CONCEPTS ================= -->
           <!-- Object-Oriented Programming -->
           <div class="skill-card" data-cat="concepts">
             <div class="skill-header">
               <i class="fa-solid fa-cubes-stacked skill-logo" style="color: #6366f1;"></i>
               <div>
-                <h4 class="skill-name">OOP & Architecture</h4>
+                <h4 class="skill-name">OOP</h4>
                 <span class="skill-badge purple">Core CS</span>
               </div>
             </div>
-            <p class="skill-desc">Encapsulation, abstraction, inheritance, polymorphism, separation of concerns, and clean interface design.</p>
-            <div class="skill-level-bar">
-              <div class="bar-fill" style="width: 88%;"></div>
-            </div>
-          </div>
-
-          <!-- File & Error Handling -->
-          <div class="skill-card" data-cat="concepts">
-            <div class="skill-header">
-              <i class="fa-solid fa-file-shield skill-logo" style="color: #3b82f6;"></i>
-              <div>
-                <h4 class="skill-name">File & Error Handling</h4>
-                <span class="skill-badge blue">Reliability</span>
-              </div>
-            </div>
-            <p class="skill-desc">Atomic file writes, JSON/CSV state persistence, exception try/catch pipelines, and comprehensive audit logs.</p>
+            <p class="skill-desc">Encapsulation, abstraction, inheritance, polymorphism, modularity, and clean interface design.</p>
             <div class="skill-level-bar">
               <div class="bar-fill" style="width: 90%;"></div>
             </div>
           </div>
 
-          <!-- Soft Skills -->
+          <!-- File Handling -->
           <div class="skill-card" data-cat="concepts">
             <div class="skill-header">
-              <i class="fa-solid fa-people-group skill-logo" style="color: #ec4899;"></i>
+              <i class="fa-solid fa-file-shield skill-logo" style="color: #3b82f6;"></i>
               <div>
-                <h4 class="skill-name">Communication & Strategy</h4>
-                <span class="skill-badge pink">Professional</span>
+                <h4 class="skill-name">File Handling</h4>
+                <span class="skill-badge blue">Persistence</span>
               </div>
             </div>
-            <p class="skill-desc">Technical presentation, clear documentation, strategic problem decomposition, and teamwork aptitude.</p>
+            <p class="skill-desc">Atomic file writes, JSON/text data serialization, persistent state storage, and audit trail logging.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Error Handling -->
+          <div class="skill-card" data-cat="concepts">
+            <div class="skill-header">
+              <i class="fa-solid fa-shield-halved skill-logo" style="color: #10b981;"></i>
+              <div>
+                <h4 class="skill-name">Error Handling</h4>
+                <span class="skill-badge emerald">Reliability</span>
+              </div>
+            </div>
+            <p class="skill-desc">Structured exception handling (try/catch), input validation, boundary checking, and fault tolerance.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Problem Solving -->
+          <div class="skill-card" data-cat="concepts">
+            <div class="skill-header">
+              <i class="fa-solid fa-lightbulb skill-logo" style="color: #ec4899;"></i>
+              <div>
+                <h4 class="skill-name">Problem Solving</h4>
+                <span class="skill-badge pink">Analytical</span>
+              </div>
+            </div>
+            <p class="skill-desc">Algorithmic thinking, logical decomposition, edge-case analysis, and systematic debugging.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- ================= SOFT SKILLS ================= -->
+          <!-- Communication -->
+          <div class="skill-card" data-cat="soft">
+            <div class="skill-header">
+              <i class="fa-solid fa-comments skill-logo" style="color: #14b8a6;"></i>
+              <div>
+                <h4 class="skill-name">Communication</h4>
+                <span class="skill-badge teal">Soft Skill</span>
+              </div>
+            </div>
+            <p class="skill-desc">Clear technical explanation, structured documentation, active listening, and collaborative teamwork.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Presentation & Strategy -->
+          <div class="skill-card" data-cat="soft">
+            <div class="skill-header">
+              <i class="fa-solid fa-chart-line skill-logo" style="color: #a855f7;"></i>
+              <div>
+                <h4 class="skill-name">Presentation & Strategy</h4>
+                <span class="skill-badge purple">Leadership</span>
+              </div>
+            </div>
+            <p class="skill-desc">Idea pitching, project demonstrations, strategic problem breakdown, and task prioritization.</p>
             <div class="skill-level-bar">
               <div class="bar-fill" style="width: 85%;"></div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

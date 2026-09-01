@@ -43,16 +43,15 @@ A responsive, high-performance portfolio website engineered for **AI/ML, Compute
 
 ---
 
-## 🛠️ Technical Stack & Skills
+## 🛠️ Technical Skills
 
-| Domain | Technologies & Frameworks |
+| Category | Verified Skills |
 | :--- | :--- |
-| **Primary Languages** | Python, C, Java (Basic) |
-| **AI / ML & Vision** | OpenCV, SFace Deep Neural Model, Computer Vision Pipelines, Generative AI |
-| **Web & Backend** | React.js, FastAPI, RESTful APIs, PWA (Progressive Web Apps) |
-| **Cloud & DevOps** | Firebase Hosting, Render Cloud, Git, GitHub, Netlify |
-| **Core CS Concepts** | Object-Oriented Programming (OOP), Data Persistence, Error Handling |
-| **Languages Spoken** | English (Proficient), Marathi (Native), Hindi (Fluent) |
+| **Languages** | Python (Primary), C (Basic - Certified), Java (Basic - OOP) |
+| **Tools & Platforms** | Git, GitHub, Render, Firebase Hosting |
+| **Concepts** | Object-Oriented Programming (OOP), File Handling, Error Handling, Problem Solving |
+| **Soft Skills** | Communication, Presentation, Strategy |
+| **Spoken Languages** | English (Proficient), Marathi (Native), Hindi (Fluent) |
 
 ---
 
