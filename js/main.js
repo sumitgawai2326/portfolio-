@@ -39,6 +39,7 @@ function initTheme() {
    TYPEWRITER ANIMATION
    ========================================================================== */
 const typewriterPhrases = [
+  "Python Programming Intern @ CodeAlpha",
   "B.Tech AI & Data Science Student",
   "Computer Vision & OpenCV Developer",
   "Full-Stack Python & React Engineer",

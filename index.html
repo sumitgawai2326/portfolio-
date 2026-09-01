@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sumit Rajendra Gawai | AI & Data Science | Portfolio & Placement Profile</title>
+  <title>Sumit Rajendra Gawai | Python Programming Intern @ CodeAlpha | AI & Data Science Portfolio</title>
   
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Sumit Rajendra Gawai | B.Tech AI & Data Science Portfolio (Class of 2029)">
-  <meta name="description" content="Portfolio of Sumit Rajendra Gawai - B.Tech AI & Data Science student at VPKBIET Baramati (Graduating 2029 | Current CGPA: 8.60). Specialized in Python, Computer Vision (OpenCV/SFace), Machine Learning, and Full-Stack Development.">
-  <meta name="keywords" content="Sumit Gawai, Sumit Rajendra Gawai, AI Data Science, Computer Vision, OpenCV, FastAPI, React, Portfolio, Placements, VPKBIET, CGPA 8.6, Class of 2029">
+  <meta name="title" content="Sumit Rajendra Gawai | Python Programming Intern & AI/DS Engineer">
+  <meta name="description" content="Portfolio of Sumit Rajendra Gawai - Python Programming Intern at CodeAlpha & B.Tech AI & Data Science student at VPKBIET Baramati (Class of 2029 | CGPA 8.60).">
+  <meta name="keywords" content="Sumit Gawai, Sumit Rajendra Gawai, CodeAlpha, Python Intern, AI Data Science, Computer Vision, OpenCV, FastAPI, React, Portfolio, VPKBIET, CGPA 8.6, Class of 2029">
   <meta name="author" content="Sumit Rajendra Gawai">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sumit Rajendra Gawai | AI & Data Science Portfolio (Class of 2029)">
-  <meta property="og:description" content="B.Tech AI & DS student at VPKBIET Baramati (CGPA: 8.60 • Graduating 2029) with strong foundations in Python, Computer Vision, Machine Learning, and Full-Stack Engineering.">
+  <meta property="og:title" content="Sumit Rajendra Gawai | Python Programming Intern & AI/DS Portfolio">
+  <meta property="og:description" content="Python Programming Intern at CodeAlpha & B.Tech AI & DS student at VPKBIET Baramati (CGPA: 8.60 • Graduating 2029).">
   <meta property="og:image" content="assets/profile.jpg">
 
   <!-- Google Fonts -->
@@ -2298,6 +2298,123 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    PRINT STYLES - ULTRA CLEAN 1-PAGE RESUME PRINTING
    ========================================================================== */
+
+/* Experience Section */
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(16px);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--border-highlight);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.exp-role-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-company-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #3b82f6;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.exp-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.exp-details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.exp-details-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.exp-bullets li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.exp-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.exp-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
 @media print {
   @page {
     margin: 10mm 12mm;
@@ -2543,6 +2660,7 @@ h1, h2, h3, h4, h5, h6 {
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
@@ -2564,7 +2682,7 @@ h1, h2, h3, h4, h5, h6 {
         </a>
 
         <!-- Mobile Hamburger Toggle -->
-        <button id="mobileMenuBtn"  class="mobile-toggle-btn" aria-label="Toggle navigation menu">
+        <button id="mobileMenuBtn" class="mobile-toggle-btn" aria-label="Toggle navigation menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -2581,7 +2699,7 @@ h1, h2, h3, h4, h5, h6 {
         <div class="hero-content">
           <div class="status-badge">
             <span class="pulse-dot"></span>
-            <span>Class of 2029 • Open to AI/ML & SDE Placement / Internship Opportunities</span>
+            <span>Python Programming Intern @ CodeAlpha • Class of 2029 (VPKBIET)</span>
           </div>
 
           <h1 class="hero-title">
@@ -2595,7 +2713,7 @@ h1, h2, h3, h4, h5, h6 {
           </div>
 
           <p class="hero-description">
-            First-year <strong>B.Tech in Artificial Intelligence & Data Science</strong> student at <strong>VPKBIET, Baramati (Graduating June 2029)</strong> with a <strong>Current CGPA of 8.60</strong> and a solid foundation in Python, Machine Learning, Computer Vision pipelines (OpenCV, SFace), and Full-Stack development.
+            Second-year <strong>B.Tech in Artificial Intelligence & Data Science</strong> student at <strong>VPKBIET, Baramati (Graduating June 2029)</strong> with a <strong>Current CGPA of 8.60</strong> and current <strong>Python Programming Intern at CodeAlpha</strong>, specialized in Python, Machine Learning, Computer Vision pipelines (OpenCV, SFace), and Full-Stack development.
           </p>
 
           <!-- Action Buttons -->
@@ -2646,7 +2764,7 @@ h1, h2, h3, h4, h5, h6 {
                 <div class="verified-icon"><i class="fa-solid fa-certificate"></i></div>
                 <div class="overlay-text">
                   <strong>Sumit R. Gawai</strong>
-                  <span>B.Tech AI & DS • Graduating 2029 (CGPA 8.60)</span>
+                  <span>Python Intern @ CodeAlpha • CGPA 8.60</span>
                 </div>
               </div>
             </div>
@@ -2654,7 +2772,7 @@ h1, h2, h3, h4, h5, h6 {
         </div>
       </div>
 
-      <!-- Quick Metrics Strip -->
+      <!-- Quick Metrics Strip (Clean 4 Columns) -->
       <div class="container">
         <div class="metrics-strip">
           <div class="metric-item">
@@ -2680,13 +2798,13 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </section>
 
-    <!-- ABOUT & PLACEMENT VALUE PROPOSITION -->
+    <!-- ABOUT & VALUE PROPOSITION -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Overview</span>
-          <h2 class="section-title">About Me & Recruiter Value</h2>
-          <p class="section-subtitle">A quick snapshot of my academic journey, core strengths, and what I bring to engineering teams.</p>
+          <h2 class="section-title">About Me & Profile</h2>
+          <p class="section-subtitle">A quick snapshot of my academic journey, industry experience, and technical foundation.</p>
         </div>
 
         <div class="about-grid">
@@ -2697,27 +2815,27 @@ h1, h2, h3, h4, h5, h6 {
               Engineering Profile
             </h3>
             <p class="bio-paragraph">
-              I am a first-year <strong>B.Tech student in Artificial Intelligence and Data Science</strong> at <strong>Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering & Technology (VPKBIET), Baramati</strong> (Graduation Year: <strong>2029</strong>) maintaining a <strong>Current CGPA of 8.60 / 10.0</strong>.
+              I am a <strong>B.Tech student in Artificial Intelligence and Data Science</strong> at <strong>Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering & Technology (VPKBIET), Baramati</strong> (Graduating <strong>2029</strong>) maintaining a <strong>Current CGPA of 8.60 / 10.0</strong>, and currently working as a <strong>Python Programming Intern at CodeAlpha</strong>.
             </p>
             <p class="bio-paragraph">
-              My engineering philosophy revolves around <em>practical implementation</em>. Rather than just learning syntax or isolated algorithms, I build complete end-to-end solutions—from training and tuning computer vision models (OpenCV, SFace) for multi-face recognition, to architecting secure FastAPI backends and installable React PWAs deployed on cloud platforms (Render & Firebase).
+              My engineering approach centers on practical execution. I build complete end-to-end applications—ranging from computer vision pipelines (OpenCV, SFace) for facial recognition to high-performance FastAPI backend services and installable React PWAs deployed on cloud platforms (Render & Firebase).
             </p>
             <p class="bio-paragraph">
-              I am actively seeking <strong>technical internships and placement opportunities</strong> where I can contribute to AI/ML pipelines, backend architectures, and production software while continuously leveling up under experienced engineering mentors.
+              I am actively seeking <strong>AI/ML, Data Science, and Software Engineering internship / placement opportunities</strong> to contribute to production codebases and strengthen real-world technical capabilities.
             </p>
 
             <div class="quick-facts-grid">
               <div class="fact-item">
-                <i class="fa-solid fa-calendar-check"></i>
+                <i class="fa-solid fa-briefcase"></i>
                 <div>
-                  <span class="fact-label">Graduation Year</span>
-                  <span class="fact-value"><strong>2029</strong> (Batch 2025–2029)</span>
+                  <span class="fact-label">Current Role</span>
+                  <span class="fact-value">Python Intern @ <strong>CodeAlpha</strong></span>
                 </div>
               </div>
               <div class="fact-item">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <div>
-                  <span class="fact-label">Current Academic Standing</span>
+                  <span class="fact-label">Academic Standing</span>
                   <span class="fact-value">B.Tech AI & DS • <strong>8.60 CGPA</strong></span>
                 </div>
               </div>
@@ -2746,7 +2864,7 @@ h1, h2, h3, h4, h5, h6 {
               </div>
               <div class="pillar-content">
                 <h4>Computer Vision & AI/ML</h4>
-                <p>Experience building real-time face detection, confidence threshold tuning, multi-face tracking, and unknown-person rejection using OpenCV & SFace.</p>
+                <p>Real-time face detection, confidence threshold tuning, multi-face tracking, and unknown-person rejection using OpenCV & SFace.</p>
               </div>
             </div>
 
@@ -2756,7 +2874,7 @@ h1, h2, h3, h4, h5, h6 {
               </div>
               <div class="pillar-content">
                 <h4>OOP & Clean Code Structure</h4>
-                <p>Disciplined object-oriented programming in Python & C/Java, structured exception handling, modularity, and persistent file-based audit logging.</p>
+                <p>Object-oriented programming in Python, C, and Java, structured error handling, modularity, and persistent file-based logging.</p>
               </div>
             </div>
 
@@ -2766,7 +2884,7 @@ h1, h2, h3, h4, h5, h6 {
               </div>
               <div class="pillar-content">
                 <h4>Full-Stack & Cloud Deployment</h4>
-                <p>Capable of integrating React.js frontends with FastAPI backends, building Progressive Web Apps (PWA), and deploying to Firebase Hosting & Render.</p>
+                <p>Integrating React.js frontends with FastAPI backends, building Progressive Web Apps (PWA), and deploying to Firebase & Render.</p>
               </div>
             </div>
 
@@ -2775,8 +2893,8 @@ h1, h2, h3, h4, h5, h6 {
                 <i class="fa-solid fa-bolt"></i>
               </div>
               <div class="pillar-content">
-                <h4>Agile Learner & Class of 2029</h4>
-                <p>Strong 8.60 CGPA coupled with Gen AI certification and hands-on full-stack development. Quick to adapt to new toolchains and production workflows.</p>
+                <h4>Industry Experience & Class of 2029</h4>
+                <p>CodeAlpha Python Intern with 8.60 CGPA, verified Gen AI certification, and active project implementation.</p>
               </div>
             </div>
           </div>
@@ -2784,28 +2902,82 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </section>
 
-        <!-- TECHNICAL SKILLS MATRIX (Matched 1-to-1 with Verified Resume) -->
-    <section id="skills" class="section bg-alt">
+    <!-- NEW SECTION: EXPERIENCE & INTERNSHIP -->
+    <section id="experience" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Work Experience</span>
+          <h2 class="section-title">Internship & Industry Experience</h2>
+          <p class="section-subtitle">Professional work experience, virtual internships, and official credential verifications.</p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- CodeAlpha Internship Card -->
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-title">
+                  <i class="fa-brands fa-python" style="color: #38bdf8;"></i>
+                  Python Programming Intern
+                </h3>
+                <div style="display: flex; gap: 8px; align-items: center; margin-top: 6px;">
+                  <span class="exp-company-badge"><i class="fa-solid fa-building"></i> CodeAlpha</span>
+                  <span class="score-badge" style="padding: 2px 10px; font-size: 0.8rem;"><i class="fa-solid fa-shield-halved"></i> Govt. Registered (MCA)</span>
+                </div>
+              </div>
+              <span class="exp-date-badge"><i class="fa-regular fa-calendar-check"></i> Sep 2026 – Present</span>
+            </div>
+
+            <div class="exp-details-meta">
+              <span><i class="fa-solid fa-laptop-code"></i> Virtual / Online Internship</span>
+              <span><i class="fa-solid fa-id-badge"></i> Student ID: <strong>CA/DF1/265426</strong></span>
+              <span><i class="fa-solid fa-location-dot"></i> CodeAlpha Tech, India</span>
+            </div>
+
+            <ul class="exp-bullets">
+              <li>Selected for CodeAlpha's Virtual Python Programming Internship, focused on practical assignments, software development tasks, and real-world Python applications.</li>
+              <li>Applying Python knowledge to hands-on programming tasks while strengthening problem-solving skills, algorithmic efficiency, and modular code architecture.</li>
+              <li>Working with structured data handling, object-oriented concepts, and clean coding standards under structured mentorship.</li>
+            </ul>
+
+            <div class="exp-actions-bar">
+              <a href="assets/CodeAlpha_Internship_Offer_Letter.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>View Official Offer Letter (PDF)</span>
+              </a>
+              <a href="assets/CodeAlpha_Internship_Offer_Letter.pdf" download="CodeAlpha_Internship_Offer_Letter_Sumit_Gawai.pdf" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-download"></i>
+                <span>Download Offer Letter</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX (Updated with Resume Categories) -->
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Technical Competencies</span>
           <h2 class="section-title">Skills & Technologies</h2>
-          <p class="section-subtitle">Verified technical competencies, tools, software concepts, and professional strengths matching academic and placement credentials.</p>
+          <p class="section-subtitle">Categorized breakdown of programming languages, AI/ML libraries, web frameworks, developer tools, and core computer science fundamentals.</p>
         </div>
 
         <!-- Filter Tabs strictly matching Resume categories -->
         <div class="skills-tabs">
           <button class="skill-tab active" data-category="all">All Skills</button>
           <button class="skill-tab" data-category="languages">Languages</button>
-          <button class="skill-tab" data-category="tools">Tools & Platforms</button>
+          <button class="skill-tab" data-category="aiml">AI/ML & Vision</button>
+          <button class="skill-tab" data-category="dev">Development</button>
+          <button class="skill-tab" data-category="tools">Tools & Deployment</button>
           <button class="skill-tab" data-category="concepts">Concepts</button>
           <button class="skill-tab" data-category="soft">Soft Skills</button>
         </div>
 
         <div class="skills-grid" id="skillsGrid">
           
-          <!-- ================= LANGUAGES ================= -->
-          <!-- Python -->
+          <!-- LANGUAGES -->
           <div class="skill-card" data-cat="languages">
             <div class="skill-header">
               <i class="fa-brands fa-python skill-logo" style="color: #38bdf8;"></i>
@@ -2820,7 +2992,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- C (Basic) -->
           <div class="skill-card" data-cat="languages">
             <div class="skill-header">
               <i class="fa-solid fa-c skill-logo" style="color: #818cf8;"></i>
@@ -2835,7 +3006,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Java (Basic) -->
           <div class="skill-card" data-cat="languages">
             <div class="skill-header">
               <i class="fa-brands fa-java skill-logo" style="color: #f97316;"></i>
@@ -2850,8 +3020,65 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- ================= TOOLS & PLATFORMS ================= -->
-          <!-- Git & GitHub -->
+          <!-- AI/ML & COMPUTER VISION -->
+          <div class="skill-card" data-cat="aiml">
+            <div class="skill-header">
+              <i class="fa-solid fa-camera-retro skill-logo" style="color: #10b981;"></i>
+              <div>
+                <h4 class="skill-name">OpenCV & SFace</h4>
+                <span class="skill-badge emerald">Computer Vision</span>
+              </div>
+            </div>
+            <p class="skill-desc">Real-time video frame processing, face bounding box localization, and facial feature vector extraction.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-cat="aiml">
+            <div class="skill-header">
+              <i class="fa-solid fa-brain skill-logo" style="color: #a855f7;"></i>
+              <div>
+                <h4 class="skill-name">Machine Learning</h4>
+                <span class="skill-badge purple">AI/ML Core</span>
+              </div>
+            </div>
+            <p class="skill-desc">Data preprocessing, feature representation, confidence scoring, and model threshold tuning.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- DEVELOPMENT -->
+          <div class="skill-card" data-cat="dev">
+            <div class="skill-header">
+              <i class="fa-brands fa-react skill-logo" style="color: #06b6d4;"></i>
+              <div>
+                <h4 class="skill-name">React.js</h4>
+                <span class="skill-badge cyan">Frontend</span>
+              </div>
+            </div>
+            <p class="skill-desc">Component-driven UI, state management, webcam integration, and installable PWA architectures.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-cat="dev">
+            <div class="skill-header">
+              <i class="fa-solid fa-bolt skill-logo" style="color: #059669;"></i>
+              <div>
+                <h4 class="skill-name">FastAPI & REST APIs</h4>
+                <span class="skill-badge emerald">REST Backend</span>
+              </div>
+            </div>
+            <p class="skill-desc">High-performance asynchronous Python REST APIs, endpoint routing, CORS handling, and model serving.</p>
+            <div class="skill-level-bar">
+              <div class="bar-fill" style="width: 86%;"></div>
+            </div>
+          </div>
+
+          <!-- TOOLS & DEPLOYMENT -->
           <div class="skill-card" data-cat="tools">
             <div class="skill-header">
               <i class="fa-brands fa-github skill-logo" style="color: #f3f4f6;"></i>
@@ -2866,7 +3093,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Render -->
           <div class="skill-card" data-cat="tools">
             <div class="skill-header">
               <i class="fa-solid fa-cloud-arrow-up skill-logo" style="color: #00C7B7;"></i>
@@ -2881,7 +3107,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Firebase Hosting -->
           <div class="skill-card" data-cat="tools">
             <div class="skill-header">
               <i class="fa-solid fa-fire skill-logo" style="color: #f59e0b;"></i>
@@ -2896,8 +3121,7 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- ================= CORE CONCEPTS ================= -->
-          <!-- Object-Oriented Programming -->
+          <!-- CONCEPTS -->
           <div class="skill-card" data-cat="concepts">
             <div class="skill-header">
               <i class="fa-solid fa-cubes-stacked skill-logo" style="color: #6366f1;"></i>
@@ -2912,7 +3136,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- File Handling -->
           <div class="skill-card" data-cat="concepts">
             <div class="skill-header">
               <i class="fa-solid fa-file-shield skill-logo" style="color: #3b82f6;"></i>
@@ -2927,7 +3150,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Error Handling -->
           <div class="skill-card" data-cat="concepts">
             <div class="skill-header">
               <i class="fa-solid fa-shield-halved skill-logo" style="color: #10b981;"></i>
@@ -2942,7 +3164,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Problem Solving -->
           <div class="skill-card" data-cat="concepts">
             <div class="skill-header">
               <i class="fa-solid fa-lightbulb skill-logo" style="color: #ec4899;"></i>
@@ -2957,8 +3178,7 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- ================= SOFT SKILLS ================= -->
-          <!-- Communication -->
+          <!-- SOFT SKILLS -->
           <div class="skill-card" data-cat="soft">
             <div class="skill-header">
               <i class="fa-solid fa-comments skill-logo" style="color: #14b8a6;"></i>
@@ -2973,7 +3193,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Presentation & Strategy -->
           <div class="skill-card" data-cat="soft">
             <div class="skill-header">
               <i class="fa-solid fa-chart-line skill-logo" style="color: #a855f7;"></i>
@@ -2993,7 +3212,7 @@ h1, h2, h3, h4, h5, h6 {
     </section>
 
     <!-- FEATURED PROJECTS SHOWCASE -->
-    <section id="projects" class="section">
+    <section id="projects" class="section bg-alt">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Hands-on Engineering</span>
@@ -3211,7 +3430,7 @@ h1, h2, h3, h4, h5, h6 {
     </section>
 
     <!-- EDUCATION & TIMELINE -->
-    <section id="education" class="section bg-alt">
+    <section id="education" class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Academic Background</span>
@@ -3278,7 +3497,7 @@ h1, h2, h3, h4, h5, h6 {
     </section>
 
     <!-- CERTIFICATIONS & ACHIEVEMENTS -->
-    <section id="certifications" class="section">
+    <section id="certifications" class="section bg-alt">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Continuous Upskilling</span>
@@ -3367,7 +3586,7 @@ h1, h2, h3, h4, h5, h6 {
     </section>
 
     <!-- PLACEMENT & RECRUITER CONTACT HUB -->
-    <section id="contact" class="section bg-alt">
+    <section id="contact" class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Get in Touch</span>
@@ -3441,7 +3660,7 @@ h1, h2, h3, h4, h5, h6 {
             <!-- Direct CV / Resume Link -->
             <div class="contact-resume-box">
               <h4>Placement Ready</h4>
-              <p>Review my complete academic credentials, technical skills, and projects.</p>
+              <p>Review my complete academic credentials, CodeAlpha internship, technical skills, and projects.</p>
               <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block" style="text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
                 <i class="fa-solid fa-file-pdf"></i>
                 <span>Open Official CV / Resume</span>
@@ -3449,12 +3668,11 @@ h1, h2, h3, h4, h5, h6 {
             </div>
           </div>
 
-          <!-- Right: Interactive Message Form -->
+          <!-- Right: Interactive Message Form with Direct Gmail Compose -->
           <div class="contact-form-card card">
             <h3>Send a Message</h3>
             <p>Leave a note or schedule a discussion regarding internships and projects.</p>
 
-            <!-- Contact Form Card -->
             <form id="contactForm" onsubmit="handleContactDispatch(event)">
               <div class="form-group">
                 <label for="senderName">Your Name / Recruiter Name *</label>
@@ -3489,13 +3707,10 @@ h1, h2, h3, h4, h5, h6 {
               </div>
 
               <div style="display: flex; flex-direction: column; gap: 10px;">
-                <!-- Main Dispatch Button: Sends directly to Gmail -->
                 <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
                   <i class="fa-brands fa-google"></i>
                   <span>Send via Gmail / Email</span>
                 </button>
-
-                <!-- Instant WhatsApp Direct Option -->
                 <a href="https://wa.me/918999253421?text=Hi%20Sumit,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block" style="text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
                   <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.1rem;"></i>
                   <span>Direct WhatsApp Connect</span>
@@ -3516,11 +3731,12 @@ h1, h2, h3, h4, h5, h6 {
           <span class="logo-symbol">&lt;/&gt;</span>
           <span class="logo-text">Sumit<span class="highlight">.Gawai</span></span>
         </a>
-        <p>B.Tech AI & Data Science • Class of 2029 (Current CGPA: 8.60) • VPKBIET Baramati</p>
+        <p>Python Programming Intern @ CodeAlpha • B.Tech AI & Data Science (Class of 2029) • VPKBIET Baramati</p>
       </div>
 
       <div class="footer-links">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
@@ -3541,7 +3757,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
   </footer>
 
-  <!-- RESUME PREVIEW & DOWNLOAD MODAL -->
+  <!-- RESUME PREVIEW & DOWNLOAD MODAL (Updated with Experience & New Resume) -->
   <div class="modal-backdrop" id="resumeModal">
     <div class="modal-container resume-modal">
       <div class="modal-header">
@@ -3549,12 +3765,12 @@ h1, h2, h3, h4, h5, h6 {
           <i class="fa-solid fa-file-invoice modal-icon"></i>
           <div>
             <h3>Candidate Resume — Sumit Rajendra Gawai</h3>
-            <span class="modal-sub">Placement-Ready Candidate Profile (B.Tech AI & DS • Graduating 2029 • CGPA 8.60)</span>
+            <span class="modal-sub">Python Programming Intern @ CodeAlpha • B.Tech AI & DS • Graduating 2029</span>
           </div>
         </div>
         <div class="modal-actions">
-          <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" download="Sumit_Rajendra_Gawai_Resume.pdf" class="btn btn-sm btn-primary" title="Download Official PDF File">
-            <i class="fa-solid fa-download"></i> Download PDF
+          <a href="assets/Sumit_Rajendra_Gawai_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Open PDF in New Tab">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open PDF
           </a>
           <button class="btn btn-sm btn-outline" onclick="window.print()" title="Print Clean Sheet">
             <i class="fa-solid fa-print"></i> Print Sheet
@@ -3587,7 +3803,7 @@ h1, h2, h3, h4, h5, h6 {
           <section class="r-section">
             <h2 class="r-sec-title">Career Objective</h2>
             <p class="r-text">
-              First-year B.Tech (AI & Data Science) student (CGPA: 8.60, Graduating 2029) with a strong foundation in Python, machine learning and computer vision, seeking an internship/placement opportunity to apply and grow practical AI/ML and full-stack development skills on real-world problems.
+              Second-year B.Tech (AI & Data Science) student with a foundation in Python, machine learning and computer vision, seeking AI/ML or Python internship opportunities to apply and strengthen practical skills through real-world projects.
             </p>
           </section>
 
@@ -3621,10 +3837,30 @@ h1, h2, h3, h4, h5, h6 {
             <h2 class="r-sec-title">Technical Skills</h2>
             <ul class="r-skills-list">
               <li><strong>Languages:</strong> Python, C (Basic), Java (Basic)</li>
-              <li><strong>Tools & Platforms:</strong> Git, GitHub, Render, Firebase Hosting</li>
+              <li><strong>AI/ML & Computer Vision:</strong> Machine Learning, Computer Vision, OpenCV, SFace</li>
+              <li><strong>Development:</strong> React.js, FastAPI, Firebase, REST APIs</li>
+              <li><strong>Tools & Deployment:</strong> Git, GitHub, Render, Firebase Hosting</li>
               <li><strong>Concepts:</strong> Object-Oriented Programming, File Handling, Error Handling, Problem Solving</li>
               <li><strong>Soft Skills:</strong> Communication, Presentation, Strategy</li>
             </ul>
+          </section>
+
+          <!-- Experience -->
+          <section class="r-section">
+            <h2 class="r-sec-title">Experience</h2>
+            <div class="r-entry">
+              <div class="r-entry-head">
+                <strong>Python Programming Intern | CodeAlpha</strong>
+                <span class="r-date">Sep 2026 – Present</span>
+              </div>
+              <div class="r-entry-sub">
+                <em>Virtual / Online Internship</em>
+              </div>
+              <ul class="r-bullets">
+                <li>Selected for CodeAlpha's Virtual Python Programming Internship, focused on practical assignments and projects in Python.</li>
+                <li>Applying Python knowledge to hands-on tasks while strengthening programming and problem-solving skills.</li>
+              </ul>
+            </div>
           </section>
 
           <!-- Projects -->
@@ -3638,10 +3874,9 @@ h1, h2, h3, h4, h5, h6 {
               </div>
               <ul class="r-bullets">
                 <li>Built a full-stack, AI-powered multi-student face-recognition attendance platform with real-time camera-based detection, unknown-person rejection and duplicate-attendance prevention.</li>
-                <li>Designed a dynamic academic management module (academic year, course, branch, semester, division, class, subject) alongside teacher and admin dashboards.</li>
-                <li>Tuned recognition thresholds and confidence checks to prevent misassignment of student identities across multi-face scenarios.</li>
+                <li>Designed an academic management module covering academic year, course, branch, semester, division, class and subject, with teacher and admin dashboards.</li>
+                <li>Tuned recognition thresholds and confidence checks to reduce misassignment of student identities across multi-face scenarios.</li>
                 <li>Deployed as an installable PWA with HTTPS-enabled camera access on Firebase Hosting + Render, accessible from any device or network.</li>
-                <li><strong>Repository:</strong> github.com/sumitgawai2326/ai-smart-attendance-system</li>
               </ul>
             </div>
 
@@ -3652,8 +3887,8 @@ h1, h2, h3, h4, h5, h6 {
               </div>
               <ul class="r-bullets">
                 <li>Developed a command-line banking application supporting 4-digit PIN authentication, deposits/withdrawals and real-time balance updates.</li>
-                <li>Implemented persistent, file-based data storage to fix balance resets across program restarts, plus timestamped transaction history logging.</li>
-                <li>Applied object-oriented design and structured error handling to build a robust, restart-safe application.</li>
+                <li>Implemented persistent file-based data storage and timestamped transaction-history logging.</li>
+                <li>Applied object-oriented design and structured error handling to build a restart-safe application.</li>
               </ul>
             </div>
           </section>
@@ -3792,6 +4027,7 @@ function initTheme() {
    TYPEWRITER ANIMATION
    ========================================================================== */
 const typewriterPhrases = [
+  "Python Programming Intern @ CodeAlpha",
   "B.Tech AI & Data Science Student",
   "Computer Vision & OpenCV Developer",
   "Full-Stack Python & React Engineer",
